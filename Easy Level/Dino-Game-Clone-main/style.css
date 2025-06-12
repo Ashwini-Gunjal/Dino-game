@@ -1,0 +1,131 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #f7f7f7;
+  }
+  
+  .world {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .score {
+    position: absolute;
+    font-size: 2vmin;
+    color: #535353;
+    right: 1vmin;
+    top: 1vmin;
+  }
+  
+  .highscore {
+    position: absolute;
+    font-size: 2vmin;
+    color: #535353;
+    right: 10vmin;
+    top: 1vmin;
+  }
+  .separator {
+    position: absolute;
+    font-size: 2vmin;
+    color: #535353;
+    right: 7vmin;
+    top: 1vmin;
+  }
+  
+  .start-screen {
+    position: absolute;
+    font-size: 2vmin;
+    color: #535353;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .ground {
+    --left: 0;
+    position: absolute;
+    width: 300%;
+    bottom: 0;
+    left: calc(var(--left) * 1%)
+  }
+  
+  .clouds {
+    --left: 0;
+    top: 0;
+    position: absolute;
+    width: 150%;
+    left: calc(var(--left) * 1%);
+  }
+
+.dino {
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+}
+  
+.cactus {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 1%;
+  right: 50%;
+}
+/* Toggle Theme Button */
+.toggle-theme-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Day Mode (default) */
+body.day-mode {
+  background-color: #f7f7f7;
+  color: #535353;
+}
+
+body.day-mode .score,
+body.day-mode .highscore,
+body.day-mode .separator,
+body.day-mode .start-screen {
+  color: #535353;
+}
+
+/* Night Mode */
+body.night-mode {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.night-mode .score,
+body.night-mode .highscore,
+body.night-mode .separator,
+body.night-mode .start-screen {
+  color: #e0e0e0;
+}

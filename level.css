@@ -1,0 +1,189 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+     .hero {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+    }
+    
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: white !important;
+    }
+    
+    .nav-link:hover {
+      color: #f1c40f !important;
+    }
+  .navbar-toggler-icon{
+    color: white;
+    background-color: #fff;
+  }
+    .levels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-top:10% ;
+      max-width: 2000px;
+      width: 100%;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .level-card {
+      flex: 1 1 250px;
+      background: linear-gradient(135deg, rgba(46, 139, 87, 0.9), rgba(60, 179, 113, 0.9));
+      border-radius: 16px;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .level-card:nth-child(2) {
+      background: linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(255, 165, 0, 0.9));
+    }
+    .level-card:nth-child(3) {
+      background: linear-gradient(135deg, rgba(183, 28, 28, 0.9), rgba(229, 57, 53, 0.9));
+    }
+    .level-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+    .level-card h2 {
+      font-size: 1.75rem;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+    }
+    .level-card p {
+      font-size: 1rem;
+      opacity: 0.85;
+      position: relative;
+      z-index: 2;
+    }
+    .card-image {
+      height: 120px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin: 10px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Replace these with your own image paths */
+    .level-card:nth-child(1) .card-image {
+      background-image: url(images/image3.jpg);
+    }
+    .level-card:nth-child(2) .card-image {
+      background-image:url(images/image1.jpg);
+    }
+    .level-card:nth-child(3) .card-image {
+      background-image: url(images/image2.jpg);
+    
+    }
+    .play-btn {
+      background-color: #fff;
+      color: #2e8b57;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .level-card:nth-child(2) .play-btn {
+      color: #ff8c00;
+    }
+    .level-card:nth-child(3) .play-btn {
+      color: #b71c1c;
+    }
+    .play-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    .play-btn::after {
+      content: '▶';
+      position: relative;
+      left: 2px;
+    }
+    @media (max-width: 600px) {
+      .level-card {
+        padding: 15px;
+        min-height: 280px;
+      }
+      .level-card h2 {
+        font-size: 1.5rem;
+      }
+      .level-card p {
+        font-size: 0.9rem;
+      }
+      .card-image {
+        height: 100px;
+      }
+    }
